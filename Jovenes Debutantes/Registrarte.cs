@@ -30,5 +30,10 @@ namespace Jovenes_Debutantes
             this.Close(); // regresa al login
 
         }
+
+        private void Registrarte_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

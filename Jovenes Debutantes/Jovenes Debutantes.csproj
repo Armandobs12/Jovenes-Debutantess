@@ -58,6 +58,12 @@
     <Compile Include="Inicio.Designer.cs">
       <DependentUpon>Inicio.cs</DependentUpon>
     </Compile>
+    <Compile Include="JovenPromesa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JovenPromesa.Designer.cs">
+      <DependentUpon>JovenPromesa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,8 +79,17 @@
       <DependentUpon>Registrarte.cs</DependentUpon>
     </Compile>
     <Compile Include="Sesion.cs" />
+    <Compile Include="TipoUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TipoUsuario.Designer.cs">
+      <DependentUpon>TipoUsuario.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JovenPromesa.resx">
+      <DependentUpon>JovenPromesa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -88,6 +103,9 @@
     </Compile>
     <EmbeddedResource Include="Registrarte.resx">
       <DependentUpon>Registrarte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TipoUsuario.resx">
+      <DependentUpon>TipoUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -150,6 +168,12 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fut-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\34-removebg-preview.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

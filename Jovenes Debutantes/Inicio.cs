@@ -49,7 +49,7 @@ namespace Jovenes_Debutantes
         {
             if (comboBox1.Text == Sesion.Usuario && textBox2.Text == Sesion.Password)
             {
-                MessageBox.Show("Bienvenido");
+                MessageBox.Show("Bienvenido","Ha iniciado Sesión", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 Menu menu = new Menu();
                 menu.Show();
@@ -57,7 +57,7 @@ namespace Jovenes_Debutantes
             }
             else
             {
-                MessageBox.Show("Datos incorrectos");
+                MessageBox.Show("Datos incorrectos","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
