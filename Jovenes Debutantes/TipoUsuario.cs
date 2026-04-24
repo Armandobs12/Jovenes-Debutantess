@@ -16,5 +16,22 @@ namespace Jovenes_Debutantes
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SesionGlobal.TipoUsuario = "promesa";
+            JovenPromesa jovenPromesa = new JovenPromesa(); 
+            jovenPromesa.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            SesionGlobal.TipoUsuario = "normal";
+
+            Registrarte rg = new Registrarte();
+            rg.Show();
+            this.Hide();
+        }
     }
 }

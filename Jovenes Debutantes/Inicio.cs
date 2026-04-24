@@ -39,25 +39,40 @@ namespace Jovenes_Debutantes
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Registrarte rg = new Registrarte(); 
-            rg.Show();
+            TipoUsuario tipoUsuario = new TipoUsuario();
+            tipoUsuario.Show();
             this.Hide();
-            player.controls.stop();
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             if (comboBox1.Text == Sesion.Usuario && textBox2.Text == Sesion.Password)
             {
-                MessageBox.Show("Bienvenido","Ha iniciado Sesión", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bienvenido", "Ha iniciado Sesión", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                Menu menu = new Menu();
-                menu.Show();
+                // 🔥 AQUÍ decides a dónde mandarlo
+                if (SesionGlobal.TipoUsuario == "normal")
+                {
+                    Menu menu = new Menu();
+                    menu.Show();
+                }
+                else if (SesionGlobal.TipoUsuario == "promesa")
+                {
+                    MenuPromesa promesa = new MenuPromesa();
+                    promesa.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Debes seleccionar tipo de usuario", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
                 this.Hide();
             }
             else
             {
-                MessageBox.Show("Datos incorrectos","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Datos incorrectos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
