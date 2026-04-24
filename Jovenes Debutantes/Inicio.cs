@@ -10,14 +10,17 @@ using System.Windows.Forms;
 using System.Media;
 using AxWMPLib;
 using WMPLib;
+using System.Media;
+
+
 
 namespace Jovenes_Debutantes
 {
     public partial class Inicio : Form
     {
-        WindowsMediaPlayer player = new WindowsMediaPlayer();
+        SoundPlayer player;
 
-       
+
 
 
         public Inicio()
@@ -27,10 +30,21 @@ namespace Jovenes_Debutantes
 
         private void Inicio_Load(object sender, EventArgs e)
         {
-            player.URL = Application.StartupPath + @"\Resources\cancion.mp3";
-            player.settings.setMode("loop", true);
-            player.controls.play();
+            string ruta = @"C:\Armando\Cancion.wav";
+
+            if (System.IO.File.Exists(ruta))
+            {
+                player = new SoundPlayer(ruta);
+                player.PlayLooping(); // para que se repita
+            }
+            else
+            {
+                MessageBox.Show("No se encontró el archivo de audio");
+            }
+
         }
+
+        
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -74,6 +88,18 @@ namespace Jovenes_Debutantes
             {
                 MessageBox.Show("Datos incorrectos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+
+
+        }
+
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            if (player != null)
+                player.Stop();
+
+            base.OnFormClosing(e);
         }
     }
 }

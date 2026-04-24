@@ -16,7 +16,7 @@ namespace Jovenes_Debutantes
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Inicio());
+            Application.Run(new Terminos_y_condiciones());
         }
     }
 }

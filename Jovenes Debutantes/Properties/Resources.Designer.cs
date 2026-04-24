@@ -83,6 +83,26 @@ namespace Jovenes_Debutantes.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap balon {
+            get {
+                object obj = ResourceManager.GetObject("balon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Entrenamiento_de_fuerza_futbol {
+            get {
+                object obj = ResourceManager.GetObject("Entrenamiento-de-fuerza-futbol", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fut_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("fut-removebg-preview", resourceCulture);
